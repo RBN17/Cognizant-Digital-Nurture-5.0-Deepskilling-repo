@@ -1,0 +1,29 @@
+.ng-invalid.ng-touched {
+    border: 2px solid red;
+  }
+  
+  .ng-valid.ng-touched {
+    border: 2px solid green;
+  }
+  
+  div {
+    color: red;
+    font-size: 14px;
+  }
+  
+  label {
+    color: black;
+    font-weight: bold;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 8px 16px;
+  }
+  
+  input,
+  select {
+    padding: 6px;
+    margin-top: 4px;
+    width: 250px;
+  }

@@ -1,0 +1,49 @@
+{
+  "courses": [
+    {
+      "id": "2",
+      "name": "Java",
+      "code": "JAVA201",
+      "credits": 3,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": "3",
+      "name": "React",
+      "code": "REA401",
+      "credits": 2,
+      "gradeStatus": "passed"
+    },
+    {
+      "id": "4",
+      "name": "Database",
+      "code": "DB501",
+      "credits": 3,
+      "gradeStatus": "pending"
+    },
+    {
+      "id": "5",
+      "name": "Spring Boot",
+      "code": "SPR601",
+      "credits": 4,
+      "gradeStatus": "failed"
+    },
+    {
+      "name": "nikki",
+      "code": "COURSE2",
+      "credits": 3,
+      "gradeStatus": "pending",
+      "id": "fjT95GNqnfk"
+    },
+    {
+      "name": "heelllllmaa",
+      "code": "COURSE3",
+      "credits": 3,
+      "gradeStatus": "pending",
+      "id": "UU3Ma-7AePU"
+    }
+  ],
+  "students": [],
+  "enrollments": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

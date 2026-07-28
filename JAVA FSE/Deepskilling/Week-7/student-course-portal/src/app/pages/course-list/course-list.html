@@ -1,0 +1,69 @@
+<h2>Course List</h2>
+
+<div style="margin-bottom:20px;">
+
+  <input
+    type="text"
+    placeholder="Search courses..."
+    [(ngModel)]="searchTerm">
+
+  <button (click)="updateSearch()">
+    Search
+  </button>
+
+</div>
+
+<div *ngIf="courses$ | async as courses">
+
+  <div *ngIf="courses.length > 0; else noCourses">
+
+    <div
+      *ngFor="let course of courses; trackBy: trackByCourseId"
+      style="margin-bottom:15px;">
+
+      <div
+        (click)="viewCourse(course)"
+        style="cursor:pointer;">
+
+        <app-course-card
+          [course]="course"
+          appHighlight="lightblue">
+        </app-course-card>
+
+      </div>
+
+      <button (click)="updateCourse(course, $event)">
+        Update
+      </button>
+
+      <button (click)="deleteCourse(course, $event)">
+        Delete
+      </button>
+
+      <hr>
+
+    </div>
+
+  </div>
+
+</div>
+
+<h2>Enrolled Courses</h2>
+
+<div *ngIf="enrollmentService.getEnrolledCourses().length > 0; else noEnrollment">
+
+  <ul>
+    <li *ngFor="let course of enrollmentService.getEnrolledCourses()">
+      {{ course.name }} ({{ course.code }})
+    </li>
+  </ul>
+
+</div>
+
+<ng-template #noCourses>
+  <p>No courses available.</p>
+</ng-template>
+
+<ng-template #noEnrollment>
+  <p>No courses enrolled yet.</p>
+</ng-template>
